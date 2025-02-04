@@ -4,7 +4,7 @@
     box-shadow: rgba(0, 0, 0, 0.214) 1px 1px 3px 2px;
     border-radius: 10px;
     padding:10px;
-
+    background: white;
     display:flex;
     justify-content: space-between;
     align-items: center;

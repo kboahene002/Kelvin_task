@@ -6,6 +6,7 @@
     border-radius:10px;
     box-shadow: rgba(0, 0, 0, 0.214) 1px 1px 3px 2px;
     display:flex;
+    background-color:white;
     justify-content: space-between;
 }
 
