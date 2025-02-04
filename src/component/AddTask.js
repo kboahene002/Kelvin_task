@@ -28,6 +28,7 @@ const AddTask = ({ taskList, setTaskList, task, setTask }) => {
           id: taskList.length + 1,
           title: newTask.trim(),
           date: new Date().toISOString(),
+          completed: false,
         };
 
         setTaskList([...taskList, newTaskObj]);

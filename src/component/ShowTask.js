@@ -15,15 +15,19 @@ const ShowTask = ({taskList , setTaskList , task , setTask}) => {
     //find task 
     const findTask = taskList.find((task)=> task.id == id);
     setTask(findTask);
- }
+}
+
+const completeTask = (id) => {
+    setTaskList(taskList.map((task) => {
+        if(task.id == id){
+            task.completed = !task.completed;
+        }
+        return task;
+    }))
+}
 
  
-
-  
-
-
-  
-  return (
+return (
     <div className={styles.showTask}>
       <div className={styles.header}>
         <div className={styles.header_sub}>
@@ -34,8 +38,9 @@ const ShowTask = ({taskList , setTaskList , task , setTask}) => {
       </div>
 
       <div className={styles.showTask_list}>
+    
         {taskList.map((task) => (
-          <div key={task.id} className={styles.task}>
+          <div key={task.id} className={`${styles.task} ${task.completed == true ? styles.completed : styles.task}`}>
             <div className={styles.task_content}>
               <span>{task.title}</span>
               <span className={styles.task_date}>{task.date}</span>
@@ -43,6 +48,7 @@ const ShowTask = ({taskList , setTaskList , task , setTask}) => {
             <div className={styles.task_action}>
               <a onClick={deleteTaskList.bind(this, task.id)} className={`${styles.action_button} bi bi-trash`}></a>
               <a onClick={editTaskList.bind(this, task.id)} className={`${styles.action_button} bi bi-pencil-square`}></a>
+              <a onClick={()=> completeTask(task.id)}  className={`${styles.action_button} ${task.completed == true ? styles.active : "bi bi-check2"} `}></a>
             </div>
           </div>
         ))}

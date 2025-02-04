@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <header>
+      
         <Header></Header>
         <AddTask taskList={taskList} 
                 setTaskList={setTaskList}
@@ -29,7 +29,7 @@ function App() {
               task={task}
               setTask={setTask}
         ></ShowTask>
-      </header>
+     
     </>
   );
 }

@@ -65,6 +65,11 @@
     max-width: calc(33.33% - 10px);
 }
 
+.completed{
+    border-left: 3px solid rgba(63, 236, 98, 0.871);
+    text-decoration: line-through;
+}
+
 .task_content{
     display:flex;
     flex-direction: column;

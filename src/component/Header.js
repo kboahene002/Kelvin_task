@@ -9,8 +9,8 @@ const Header = () => {
     const [themes , setThemes] = useState(JSON.parse(localStorage.getItem("themes")) || "");
 
    useEffect(() => {
-    document.documentElement.className = '';
-    document.documentElement.className = themes;
+    document.body.className = '';
+    document.body.className = themes;
     localStorage.setItem("themes" , JSON.stringify(themes));
    })
 
