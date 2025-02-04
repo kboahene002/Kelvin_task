@@ -1,0 +1,48 @@
+.addTask{
+    margin:30px auto;
+    width:30%;
+    box-shadow: rgba(0, 0, 0, 0.214) 1px 1px 3px 2px;
+    border-radius: 10px;
+    padding:10px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addTask_input{
+    
+    border-radius: 8px;
+    border:0.2px solid rgba(0, 0, 0, 0.271);
+    width:80%;
+    /* height:30px; */
+    padding:10px;
+
+    outline:none;
+    transition: border-color 0.3s ease;
+
+}
+
+.addTask_input:focus {
+    border: 2px solid #70d2bb; /* Change border color when clicked or focused */
+  }
+
+  .addTask_button{
+    color:white;
+    background-color:rgb(123, 79, 164) ;
+    padding:10px;
+    border-radius:5px ;
+    border:none;
+    transition:all .2s ease-in-out;
+    font-family: var(--font-secondary);
+    
+  }
+
+
+  .addTask_button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+  }
+  .addTask_button:active{
+    transform:translateY(2px);
+  }
