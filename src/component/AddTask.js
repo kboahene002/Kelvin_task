@@ -5,15 +5,13 @@ const AddTask = ({ taskList, setTaskList, task, setTask }) => {
   const [newTask, setNewTask] = useState("");
 
   useEffect(() => {
-    console.log(task);
-
-    if (Object.keys(task).length !== 0) {
+    if (Object.keys(task).length != 0) {
       setNewTask(task.title);
     }
   }, [task]);
 
   const addNewTask = () => {
-    if (Object.keys(task).length !== 0) {
+    if (Object.keys(task).length != 0) {
       // Edit existing task
       const updatedTaskList = taskList.map((taskItem) =>
         taskItem.id === task.id
@@ -25,7 +23,7 @@ const AddTask = ({ taskList, setTaskList, task, setTask }) => {
       resetForm();
     } else {
       // Add new task
-      if (newTask.trim() !== "") {
+      if (newTask.trim() != "") {
         const newTaskObj = {
           id: taskList.length + 1,
           title: newTask.trim(),
@@ -35,7 +33,7 @@ const AddTask = ({ taskList, setTaskList, task, setTask }) => {
         setTaskList([...taskList, newTaskObj]);
         resetForm();
       } else {
-        console.log("Please enter a task");
+        alert("Please enter a task");
       }
     }
   };
@@ -56,7 +54,7 @@ const AddTask = ({ taskList, setTaskList, task, setTask }) => {
         placeholder="Add a task"
       />
       <button onClick={addNewTask} className="addTask_button" type="submit">
-        {Object.keys(task).length !== 0 ? "Update " : "Add "}
+        {Object.keys(task).length != 0 ? "Update " : "Add "}
       </button>
     </div>
   );

@@ -46,3 +46,9 @@
   .addTask_button:active{
     transform:translateY(2px);
   }
+
+  @media (max-width: 768px){
+    .addTask{
+        width: 80%;
+    }
+  }

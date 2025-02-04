@@ -8,7 +8,7 @@ const ShowTask = ({taskList , setTaskList , task , setTask}) => {
  }
 
  const deleteTaskList = (id) => {
-     setTaskList (taskList.filter((task) => task.id !== id));
+     setTaskList (taskList.filter((task) => task.id != id));
  }
 
  const editTaskList = (id) => {
