@@ -13,7 +13,7 @@ const ShowTask = ({taskList , setTaskList , task , setTask}) => {
 
  const editTaskList = (id) => {
     //find task 
-    const findTask = taskList.find((task)=> task.id === id);
+    const findTask = taskList.find((task)=> task.id == id);
     setTask(findTask);
  }
 

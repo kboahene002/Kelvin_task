@@ -14,7 +14,7 @@ const AddTask = ({ taskList, setTaskList, task, setTask }) => {
     if (Object.keys(task).length != 0) {
       // Edit existing task
       const updatedTaskList = taskList.map((taskItem) =>
-        taskItem.id === task.id
+        taskItem.id == task.id
           ? { ...taskItem, title: newTask, date: new Date().toISOString() }
           : taskItem
       );
