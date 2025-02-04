@@ -1,6 +1,7 @@
 body {
     font-size: 16px; /* Default font size */
     height : 100vh;
+    overflow:hidden;
   }
   
   @media (max-width: 768px) {
