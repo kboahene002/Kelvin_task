@@ -26,6 +26,13 @@
     font-size: 20px;
 }
 
+.active{
+    scale: 1.3
+}
+.active:hover{
+    scale:1.25;
+}
+
 .header_themes{
     display:flex;
     align-items: center;
@@ -41,7 +48,7 @@
     border-radius:50%;
     transition:all .2s ease-in-out;
 }
-.theme-selector:not([style="scale(1.4)"]):hover{
+.theme-selector:not([style="scale(1.2)"]):hover{
     cursor: pointer;
     transform:translateY(-2px);
     transform:scale(1.2);
