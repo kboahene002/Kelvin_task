@@ -1,10 +1,16 @@
 import "../css/addTask.css";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 
 const AddTask = ({ taskList, setTaskList, task, setTask }) => {
   const [newTask, setNewTask] = useState("");
 
-  
+  useEffect(() => {
+    console.log(task);
+
+    if (Object.keys(task).length !== 0) {
+      setNewTask(task.title);
+    }
+  }, [task]);
 
   const addNewTask = () => {
     if (Object.keys(task).length !== 0) {
@@ -43,7 +49,7 @@ const AddTask = ({ taskList, setTaskList, task, setTask }) => {
     <div className="addTask">
       <input
         type="text"
-        value={Object.keys(task).length !== 0 ? newTask || task.title : newTask}
+        value={Object.keys(task).length != 0 ?  newTask : newTask}
         onChange={(e) => setNewTask(e.target.value)}
         maxLength="25"
         className="addTask_input"
